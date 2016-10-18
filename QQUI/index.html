@@ -21,6 +21,7 @@
 			#ab-page,
 			#dt-page {
 				animation: none !important;
+				-webkit-animation: none !important;
 			}
 			
 		</style>
@@ -33,7 +34,7 @@
 			<div class="page page-current" id="msg-page">
 				<!--导航栏-->
 				<header class="bar bar-nav">
-					<a class="icon icon-me pull-left"></a>
+					<a class="icon icon-me pull-left open-panel" data-panel="#info-panel"></a>
 					<button class="button pull-right"><b>+</b></button>
 					<div class="buttons-row" id="btn-title">
 						<a href="#tab1" class="tab-link active button">消息</a>
@@ -138,7 +139,7 @@
 			
 			
 			
-			
+			<!--侧边栏-->
 			<div class="panel panel-left" id="info-panel">
 			     <div class="content-block">
 			     	<p>这是侧边栏</p>
