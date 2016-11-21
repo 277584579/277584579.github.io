@@ -1,0 +1,25 @@
+
+		   .w-ensure{
+		   	width: 100%;
+		   	height: 90px;
+		   	background-color: #09C762;
+		   }
+		   .w-main{
+		   	width: 1200px;
+		   	height: 90px;
+		   	margin: 0 auto;
+		   }
+		   .w-main li{
+		   	list-style-type: none;
+		   }
+		   .w-main img{
+		   	float: left;
+		   	width: 300px;
+		   	height: 90px;
+		   }
+		   .ft-copyright{
+		   	width: 100%;
+		   	height: 130px;
+		   	padding-top: 30px;
+		   	padding-bottom: 30px;
+		   	}

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>淘菜网</title>
+		<link rel="shortcut icon" href="img/favicon_tcw9.ico" />
+		<link rel="stylesheet" type="text/css" href="libs/Font-Awesome-3.2.1/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+		<style>
+             #menu{
+             	width: 40px;
+             	height: 40px;
+             	position: fixed;
+             	right: 20px;
+             	top: 50%;
+             }
+             .cur{
+   	         display: inline-block;
+	         width: 40px;
+	         height: 40px;
+	         background-image: url(img/rtflt_svr.png);
+	         background-position-x: 0;
+	         background-position-y: -160px;
+             }
+             .cur:hover{
+             background-position-x: -40px;	
+             }
+		</style>
+	</head>
+
+	<body>
+		<nav>
+			<div class="top-toolbar">
+				<ul class="left">
+					<li id="userLoginInfo">
+						<span id="logininfo-left" class="logininfo">欢迎光临淘菜网！</span>
+						<a href="login.html" class="logininfo">请<b>登录</b></a>
+						<a href="regist.html" class="logininfo">免费注册</a>
+						<a href="" id="displace-a" class="displace"></a>
+						<a href="" class="displace" onclick="remove(event)">退出</a>
+					</li>
+				</ul>
+
+				<ul class="right">
+					<li id="cartTab">
+						<a href="" class="ttnav">淘菜网</a>
+						<span class="ttnav logininfo-right">|</span>
+						<a href="" class="ttnav">我的主页</a>
+						<span class="ttnav logininfo-right">|</span>
+						<a href="" class="ttnav">我的订单</a>
+						<span class="ttnav logininfo-right">|</span>
+						<a href="" title="查看我的购物车" class=" ttnav">
+							<span class="c-icon"></span> 购物车：
+							<strong>0</strong> 件
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<header>
+			<img style="float: left;" src="img/144248329438750388.jpg" />
+			<div class="c-slogan"></div>
+			<div class="search-tab">
+				<div class="search-form">
+					<a id="selected-top" class="selected search-content">商品 <span id="selected-content"></span></a>
+					<input type="text" id="searchKeywords" class="search-content" placeholder="请输入你想要找的信息" />
+					<button id="searchBtn" class="search-content">搜  索</button>
+				</div>
+				<div class="search-tags">
+					<a href="" class="a-orange">新鲜水果</a>
+					<a href="" class="a-orange">有机土鸡蛋</a>
+					<a href="" class="a-orange">格芬牛肉</a>
+					<a href="" class="a-orange">进口水果</a>
+					<a href="" class="a-orange">红心柚</a>
+					<a href="" class="a-orange">铁棍淮山</a>
+				</div>
+			</div>
+		</header>
+		<!--商品导航-->
+		<div class="w-nav">
+
+			<a href="" class="nav-first w-nav-nav-hide">所有商品分类<span class=" icon-angle-down"></span></a>
+
+			<a href="" class="nav-second">首页</a>
+			<a href="" class="nav-three">商店街</a>
+			<a href="" class="nav-four">资讯</a>
+		</div>
+		<!--轮播图-->
+		<!--<div id="lbt-big">-->
+
+		<div id="lbt">
+
+			<img class="lbt-img" src="img/144255649123280666.jpg" alt="" />
+			<img class="lbt-img" src="img/144255650230887896.jpg" alt="" />
+			<img class="lbt-img" src="img/144255651184658446.jpg" alt="" />
+
+		</div>
+
+		<div class="lbt-a-content">
+
+			<div class="w-nav-nav">
+				<!--需要写的东西-->
+				<ul id="goods-list" class="w-nav-nav-hide">
+					<li style="opacity: 0;"></li>
+					<li><span class="w-nav-nav-first"></span>蔬菜水果 <span class="w-nav-nav-span  icon-angle-right"></span></li>
+					<li><span class="w-nav-nav-second"></span>水产海鲜 <span class="w-nav-nav-span  icon-angle-right"></span></li>
+					<li><span class="w-nav-nav-three"></span>肉禽蛋类 <span class="w-nav-nav-span  icon-angle-right"></span></li>
+					<div class="w-nav-nav-img-div w-nav-nav-hide">
+
+						<!--更改文字-->
+						<div class="w-nav-nav-img-div-first">
+							<a href="" class=".w-nav-nav-img-a w-nav-nav-hide"></a>
+						</div>
+						<!--循环7次-->
+						<div class="w-nav-nav-img-div-second">
+
+							<p class="reduplicate-one">
+								<a></a>
+							</p>
+
+							<p class="reduplicate-two">
+								<a></a>
+							</p>
+
+							<p class="reduplicate-three">
+								<a></a>
+							</p>
+
+							<p class="reduplicate-four">
+								<a></a>
+							</p>
+
+							<p class="reduplicate-five">
+								<a></a>
+							</p>
+
+							<p class="reduplicate-six">
+								<a></a>
+							</p>
+
+							<p class="reduplicate-seven">
+								<a></a>
+							</p>
+						</div>
+
+					</div>
+
+				</ul>
+			</div>
+
+			<!--<a href="" class="lbt-a">-->
+
+			<div class="cont">
+				<div class="cont-div"></div>
+				<img class="lbt-aImg" src="img/144255665282666344.jpg" alt="" title="生江初生蛋" />
+				<div class="cont-div"></div>
+				<img class="lbt-aImg" src="img/144255666455938884.jpg" alt="" title="安岳黄柠檬" />
+			</div>
+			<!--下部导航-->
+			<div id="pl">
+				<span class="point"></span>
+				<span class="point"></span>
+				<span class="point"></span>
+			</div>
+			<!--</a>-->
+			<!--</div>-->
+		</div>
+
+		<!--主体部分-->
+		<div class="main">
+			<main>
+				<!--第一层-->
+				<div class="floor-hd">
+					<span></span>
+					<h2>
+					蔬菜水果
+				</h2>
+
+					<h3>
+					<a href="">全部</a>
+					<a href="">进口水果</a>
+					<a href="">苹果</a>
+					<a href="">柑橘</a>
+					<a href="">瓜类</a>
+				</h3>
+				</div>
+				<div id="floor-hd-first">
+
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144255871408624623.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144255873305076068.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144255874720687397.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144255875617485042.jpg" alt="" /></div>
+					<!--小轮播图-->
+					<div id="lbt-small" class="floor-hd-first-float">
+						<img src="img/144255675502412520.jpg" alt="" /><img src="img/14425567662121137.jpg" alt="" /><img src="img/144255675502412520.jpg" alt="" />
+
+						<div id="pl-small">
+							<span class="point-small"></span>
+							<span class="point-small"></span>
+						</div>
+					</div>
+
+					<ul id="fl-p">
+						<li class="fl-p-1"><img src="img/14428888031204185.jpg" />
+							<!--可重复-->
+							<div class="p-name">
+								<a class="p-name-a" href="" title="长葱 3kg">长葱 3kg</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>￥55.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144289355879682986.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【健康公社】精选新鲜安岳黄柠檬2斤装大果7粒左右 清新多汁酸爽不打蜡 营养全面">【健康公社】精选新鲜安岳</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>￥25.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144255873305076068.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="绿色无公害铁棍淮山500g">绿色无公害铁棍淮山500g</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>￥18.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144288852128243534.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="菜心2kg">菜心2kg</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>￥40.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144288962840432708.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="超甜玉米 8个 2.5kg">超甜玉米 8个 2.5kg</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>￥50.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144297366546878547.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【芋香冬瓜】特色（具有香芋的味道）迷你冬瓜新品种，球形翠绿色冬瓜">【芋香冬瓜】特色（具有香</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>￥25.0</strong>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="blank-space">
+
+				</div>
+				<!--第二层-->
+				<div class="floor-hd-big">
+					<div class="floor-hd">
+						<span></span>
+						<h2>
+					蔬菜水果
+				</h2>
+
+						<h3>
+					<a href="">全部</a>
+					<a href="">秋刀鱼</a>
+					<a href="">黄鱼</a>
+					<a href="">带鱼</a>
+					<a href="">石斑鱼</a>
+				</h3>
+					</div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144256329186615789.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144256330125919290.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144256331192364226.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144256332222888334.jpg" alt="" /></div>
+
+					<!--小轮播图2-->
+					<div class="lbt-small-second floor-hd-first-float">
+
+						<img src="img/144256316990743267.jpg" alt="" /><img src="img/144256318049842102.jpg" alt="" /><img src="img/144256316990743267.jpg" alt="" />
+
+						<div class="pl-small-second">
+							<span class="point-small-second"></span>
+							<span class="point-small-second"></span>
+						</div>
+					</div>
+
+					<ul id="fl-p">
+						<li class="fl-p-1"><img src="img/144290441474746085.jpg" />
+							<!--可重复-->
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【北极品水产】盐鲜鲈鱼1KG（400-700g/条）">【北极品水产】盐鲜鲈鱼</a>
+								<div class="p-sale">北极品水产-盐鲜鲈鱼Salted</div>
+								<div class="p-price">
+									<strong>￥38.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144290388941682604.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【海源水产】鲈鱼下巴1KG">【海源水产】鲈鱼下巴1KG</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>￥15.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144290374912630728.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【海源水产】鲈鱼胃1包">【海源水产】鲈鱼胃1包</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>¥30.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144290292836936408.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【北极品水产】鱼鳍 Fish Jaw1包（500g）">【北极品水产】鱼鳍 Fish </a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>¥20.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144290191001570617.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【北极品水产】裹粉鲈鱼片">【北极品水产】裹粉鲈鱼片</a>
+								<div class="p-sale">该商品价格需要面议，请联</div>
+								<div class="p-price">
+									<strong>¥9999.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144290460394295085.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【之山水产】黄花鱼">【之山水产】黄花鱼</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>¥60.0</strong>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--第三层-->
+
+				<div class="blank-space">
+
+				</div>
+				<div class="floor-hd-big-last">
+					<div class="floor-hd">
+						<span></span>
+						<h2>
+					蔬菜水果
+				</h2>
+
+						<h3>
+					<a href="">全部</a>
+					<a href="">进口水果</a>
+					<a href="">苹果</a>
+					<a href="">柑橘</a>
+					<a href="">瓜类</a>
+				</h3>
+					</div>
+
+					<!--可重复-->
+					<!--轮播图-->
+
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144256374666184047.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144256375663575859.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144256376560775580.jpg" alt="" /></div>
+					<div class="p-img-lm"><img class="floor-hd-first-float floor-hd-first-remove" src="img/144256377955335682.jpg" alt="" /></div>
+					<div class="lbt-small-three floor-hd-first-float">
+
+						<img src="img/144256372780851138.jpg" alt="" /><img src="img/14425637182804795.jpg" alt="" /><img src="img/144256372780851138.jpg" alt="" />
+
+						<div class="pl-small-three">
+							<span class="point-small-three"></span>
+							<span class="point-small-three"></span>
+						</div>
+					</div>
+					<!--！！！！！！！！！！！！！！-->
+					<ul id="fl-p">
+						<li class="fl-p-1"><img src="img/144297243672631155.jpg" />
+							<!--可重复-->
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【原始蛋】生江初生蛋 鸡蛋30只/盒">【原始蛋】生江初生蛋 鸡蛋</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>￥58.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144297206102579245.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【黄果树】生态原香有机土鸡蛋（32枚）礼盒装">【黄果树】生态原香有机土</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>¥98.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/14429729775407331.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【正宗清远鸡】熟食 好爱牌即食整鸡1只装约500克">【正宗清远鸡】熟食 好爱牌</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>¥108.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144297172733074325.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【牛腩切块】格芬牧场">【牛腩切块】格芬牧场</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>¥46.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144297259531664859.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【原始蛋】生江富硒蛋 鸡蛋30只/盒">【原始蛋】生江富硒蛋 鸡蛋</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>¥169.0</strong>
+								</div>
+							</div>
+						</li>
+						<li class="fl-p-1"><img src="img/144297366546878547.jpg" />
+							<div class="p-name">
+								<a class="p-name-a" href="" title="【原始蛋】生江月婆蛋 鸡蛋30只/盒">【原始蛋】生江月婆蛋 鸡蛋</a>
+								<div class="p-sale"></div>
+								<div class="p-price">
+									<strong>¥80.0</strong>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="blank-space">
+
+				</div>
+				
+			</main>
+			<!--固定返回栏-->
+				  <div id="menu">
+	                
+		                <a id="item1" class="cur"></a>
+	                
+                  </div>
+			<footer>
+				<div class="w-ensure">
+					<div class="w-main">
+						<ul>
+							<li><img src="img/ft-svr1.gif" /></li>
+							<li><img src="img/ft-svr2.gif" /></li>
+							<li><img src="img/ft-svr3.gif" /></li>
+							<li><img src="img/ft-svr4.gif" /></li>
+						</ul>
+					</div>
+				</div>
+				<div class="ft-copyright">
+					<div class="ft-cp-link" style="margin:0px;padding:0px;">
+						<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;line-height:26px;color:#999999;font-family:tahoma, arial, 宋体, sans-serif;"><span style="margin:0px;padding:0px;line-height:1.5;">运营单位：云浮新兴农业　</span><span style="margin:0px;padding:0px;line-height:1.5;">技术支持：村村通科技</span></p>
+						<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;"><span style="color:#999999;font-family:tahoma, arial, 宋体, sans-serif;line-height:26px;">地址：云浮新兴　电话：86-0851-86202418</span></p>
+						<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;line-height:26px;color:#999999;font-family:tahoma, arial, 宋体, sans-serif;">E-mail：123456@163.com　粤ICP备13002611号</p>
+					</div>
+				</div>
+		</div>
+		</footer>
+		</di>
+	</body>
+	<script src="libs/jquery.min.js"></script>
+	<script src="js/control.js"></script>
+	<script src="js/Shuffling-figure.js"></script>
+	<script src="js/small-Shuffing.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="libs/jquery.cookie.js"></script>
+
+</html>
+<script>
+
+if($.cookie().token){
+	console.log($.cookie())
+	$(".logininfo").hide()
+	
+	$("#logininfo-left").show()
+	$(".displace").show()
+	var user = $.cookie().name;
+	
+	$("#displace-a").text(user);
+}else{
+//    $(".logininfo").show()
+//    $(".displace").hide()
+$(".displace").hide()
+
+//if($.cookie().token="null"){
+//	 $(".logininfo").show()
+//    $(".displace").hide()
+}
+    function remove(event){
+     event.preventDefault();
+	  $.cookie("token","null")
+	  $.removeCookie("token")
+	  $.removeCookie("name")
+	  $(".displace").hide()
+       location.reload();
+    }
+ 
+
+
+</script>

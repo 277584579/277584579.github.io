@@ -1,0 +1,513 @@
+.main {
+	width: 100%;
+	/*height: 1800px;*/
+	background-color: #F5F5F5;
+	padding-top: 20px;
+}
+
+main {
+	width: 1200px;
+	margin: 0 auto;
+	/*margin-top: 20px;*/
+	z-index: -1;
+}
+
+.floor-hd {
+	width: 100%;
+	height: 34px;
+	border-bottom: 2px solid #F97E8F;
+}
+
+.floor-hd>h2 {
+	display: inline-block;
+	font-size: 20px;
+	height: 34px;
+	font-weight: 400;
+	color: #F97E8F;
+	line-height: 34px;
+}
+
+.floor-hd span {
+	float: left;
+	display: inline-block;
+	width: 48px;
+	height: 26px;
+	background-image: url(../img/cct_ys.png);
+	background-position-x: 0;
+	background-position-y: 0;
+	background-repeat: no-repeat;
+	color: red;
+	margin-top: 4px;
+	margin-right: 10px;
+
+}
+
+.floor-hd h3 {
+	float: right;
+	text-align: left;
+}
+
+.floor-hd a {
+	display: inline-block;
+	font-size: 12px;
+	color: #666666;
+	line-height: 34px;
+	font-weight: 100;
+	margin: 0 10px;
+}
+
+.floor-hd a:hover {
+	color: #F97E8F;
+	text-decoration: underline;
+}
+
+
+
+
+/*小轮播图*/
+#lbt-small {
+	width: 400px;
+	height: 255px;
+	position: relative;
+	overflow: hidden;
+}
+
+#lbt-small>img {
+	width: 400px;
+	height: 255px;
+	/*position为 absolute的元素定位,相对于上层
+				离自己最近的position不为static的元素*/
+	position: absolute;
+	transition: left 0.5s ease-in-out;
+}
+
+.lbt-aImg:hover {
+	opacity: 0.8;
+}
+
+#pl-small {
+	position: absolute;
+	/*height: 10px;*/
+	width: 100%;
+	bottom: 10px;
+	text-align: center;
+}
+
+.point-small {
+	display: inline-block;
+	width: 20px;
+	height: 10px;
+	background-color: #B8CABA;
+	opacity: 0.9;
+	cursor: pointer;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*小轮播图*/
+.lbt-small-second {
+	width: 400px;
+	height: 255px;
+	position: relative;
+	overflow: hidden;
+}
+
+.pl-small-second>img {
+	width: 400px;
+	height: 255px;
+	/*position为 absolute的元素定位,相对于上层
+				离自己最近的position不为static的元素*/
+	position: absolute;
+	transition: left 0.5s ease-in-out;
+}
+.pl-small-second{
+	position: absolute;
+	/*height: 10px;*/
+	width: 100%;
+	bottom: 10px;
+	text-align: center;
+}
+.point-small-second {
+	display: inline-block;
+	width: 20px;
+	height: 10px;
+	background-color: #B8CABA;
+	opacity: 0.9;
+	cursor: pointer;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*小轮播图3*/
+.lbt-small-three {
+	width: 400px;
+	height: 255px;
+	position: relative;
+	overflow: hidden;
+}
+
+.pl-small-three>img {
+	width: 400px;
+	height: 255px;
+	/*position为 absolute的元素定位,相对于上层
+				离自己最近的position不为static的元素*/
+	position: absolute;
+	transition: left 0.5s ease-in-out;
+}
+.pl-small-three{
+	position: absolute;
+	/*height: 10px;*/
+	width: 100%;
+	bottom: 10px;
+	text-align: center;
+}
+.point-small-three {
+	display: inline-block;
+	width: 20px;
+	height: 10px;
+	background-color: #B8CABA;
+	opacity: 0.9;
+	cursor: pointer;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.w-nav-nav {
+	position: relative;
+}
+
+.w-nav-nav ul {
+	width: 210px;
+	position: absolute;
+}
+
+.w-nav-nav-img {
+	/*display: none;*/
+	
+	width: 100%;
+	height: 100%;
+	/*margin-top: -22px;*/
+	/*box-shadow: 0 0 0.2px 1px black;*/
+    position: absolute;
+	z-index: 1;
+
+}
+/*.w-nav-nav-img-a{
+    position: absolute;
+	display: block;
+    margin-top: 10px;
+
+	/*font-weight: 700;*/
+	/*font-size: 5px;
+	color: #666666;
+	z-index: 100;*/
+	
+/*}*/
+.w-nav-nav-img-div-first{
+	width: 360px;
+	height: 26px;
+	margin-top: 18px;
+	margin-left: 20px;
+	border-bottom: 1px solid #E5E5E5;
+}
+.w-nav-nav-img-div{
+	clear: both;
+	top: 41px;
+	left: 210px;
+	font-size: 12px;
+	position: absolute;
+	/*background-image: url(../img/144248428837942547.jpg);*/
+	width: 400px;
+	height: 400px;
+    letter-spacing: 1px;
+}
+.w-nav-nav-img-div a{
+	color: #666666;
+	font-weight: 700;
+}
+/*.w-nav-nav-img-div p{
+	width: 120px;
+	height: 24px;
+	margin-top: 5px;
+}*/
+/*.w-nav-nav-img-div p>a{
+	
+}*/
+.w-nav-nav-img-div-second{
+	width: 360px;
+	margin: 0 auto;
+	
+}
+.w-nav-nav-img-div-second>p{
+	display: inline-block;
+	float: left;
+	width: 120px;
+	height: 24px;
+	margin-top: 5px;
+	line-height: 24px;
+}
+.w-nav-nav-img-div-second a{
+	display: inline-block;
+	padding: 4px;
+}
+
+/*.w-nav-nav-img-div br{
+	width: 360px;
+	height: 2px;
+	border: 2px solid black;
+}*/
+.w-nav-nav-img-div a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.w-nav-nav-img-div-second a:hover{
+	background-color: #09C762;
+	text-decoration: none;
+	color: white;
+}
+.w-nav-nav li {
+	width: 100%;
+	height: 41px;
+	line-height: 41px;
+	/*text-align: center;*/
+	color: white;
+	background-color: #148C42;
+	font-size: 14px;
+	list-style-type: none;
+}
+
+.w-nav-nav-first {
+	display: inline-block;
+	margin-top: 12px;
+	margin-left: 16px;
+	margin-right: 26px;
+	width: 16px;
+	height: 16px;
+	line-height: 41px;
+	background-image: url(img/cct_c_icon_tcw.png);
+	background-position: 0px 0px;
+	background-position-x: 0px;
+	background-position-y: 0;
+	background-size: auto auto;
+	background-repeat: no-repeat;
+	background-origin: padding-box;
+}
+
+.w-nav-nav li:hover {
+	padding-left: 5px;
+	transition-delay: 0s;
+	transition-duration: 0.2s;
+	/*transition-property：是用来指定当元素其中一个属性改变时执行transition效果（例如：长度，宽度，颜色等）。*/
+	transition-property: padding-left;
+	transition-timing-function: ease-in;
+	background-color: #007130;
+}
+
+
+/*嵌套*/
+
+.w-nav-nav li:hover .w-nav-nav-span {
+	display: none;
+	
+}
+
+.w-nav-nav-second {
+	display: inline-block;
+	margin-top: 12px;
+	margin-left: 16px;
+	margin-right: 26px;
+	width: 16px;
+	height: 16px;
+	line-height: 41px;
+	background-image: url(img/cct_c_icon_tcw.png);
+	background-position: 0px 0px;
+	background-position-x: 0px;
+	background-position-y: -16px;
+	background-size: auto auto;
+	background-repeat: no-repeat;
+	background-origin: padding-box;
+}
+
+.w-nav-nav-three {
+	display: inline-block;
+	margin-top: 12px;
+	margin-left: 16px;
+	margin-right: 26px;
+	width: 16px;
+	height: 16px;
+	line-height: 41px;
+	background-image: url(img/cct_c_icon_tcw.png);
+	background-position: 0px 0px;
+	background-position-x: 0px;
+	background-position-y: -32px;
+	background-size: auto auto;
+	background-repeat: no-repeat;
+	background-origin: padding-box;
+}
+
+
+/*#lbt-big{
+				width: 100%;
+				height: 400px;
+				
+			}*/
+
+.lbt-a-content {
+	margin: 0 auto;
+	width: 1200px;
+	height: 350px;
+	position: relative;
+}
+
+#pl {
+	position: absolute;
+	height: 40px;
+	width: 100%;
+	bottom: 100px;
+	bottom: 0px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.w-nav-nav-span {
+	margin-left: 60px;
+}
+
+
+
+#fl-p {
+	width: 100%;
+	height: 266px;
+}
+
+.fl-p-1 {
+	list-style-type: none;
+	width: 200px;
+	height: 266px;
+	padding: 25px 25px 0px 25px;
+	border-left: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
+	border-top: 1px solid #E5E5E5;
+	float: left;
+	background-color: #FFFFFF;
+}
+
+.fl-p-1 img {
+	width: 150px;
+	height: 150px;
+	
+}
+.fl-p-1 img:hover{
+	opacity: 0.7;
+}
+.p-name {
+	width: 100%;
+	height: 18px;
+	margin-top: 1px;
+}
+
+.p-name-a {
+	font-size: 12px;
+	color: #666666;
+}
+
+.p-name-a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.p-sale {
+	width: 100%;
+	height: 18px;
+}
+
+.p-price {
+	width: 100%;
+	height: 30px;
+}
+
+.p-price strong {
+	font-size: 16px;
+	line-height: 30px;
+	color: red;
+	margin-left: -3px;
+	text-align: left;
+}
+.floor-hd-first-remove{
+	border-left: 1px solid #E5E5E5;
+}
+.blank-space{
+	clear: both;
+	width: 100%;
+	height: 20px;
+}
+.floor-hd-big>.floor-hd>span{
+		float: left;
+	display: inline-block;
+	width: 48px;
+	height: 26px;
+	background-image: url(../img/cct_ys.png);
+	background-position-x: 0;
+	background-position-y: -27px;
+	background-repeat: no-repeat;
+	color: red;
+	margin-top: 4px;
+	margin-right: 10px;
+}
+.floor-hd-big>.floor-hd{
+	border-bottom: 2px solid #5DB5F4;
+}
+.floor-hd-big>.floor-hd>h2{
+	color: #5DB5F4;
+}
+.floor-hd-first-float{
+	position: relative;
+}
+.floor-hd-first-float>img{
+	position: absolute;
+	
+}
+#goods-list{
+	margin-top: -41px;
+}
+.p-img-lm{
+	float: right;
+	overflow: hidden;
+	width: 200px;
+	height: 255px;
+	border-left: 1px solid #E5E5E5;
+	background-color: #FFFFFF;
+}
+
+.floor-hd-first-float {
+	float: right;
+}
+
+.p-img-lm img:hover {
+	padding-right: 5px;
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	/*transition-property：是用来指定当元素其中一个属性改变时执行transition效果（例如：长度，宽度，颜色等）。*/
+	transition-property: padding-right;
+	transition-timing-function: ease-in;
+	
+}
+/*第三层样式*/
+.floor-hd-big-last>.floor-hd>span{
+		float: left;
+	display: inline-block;
+	width: 48px;
+	height: 26px;
+	background-image: url(../img/cct_ys.png);
+	background-position-x: 0;
+	background-position-y: -54px;
+	background-repeat: no-repeat;
+	color: red;
+	margin-top: 4px;
+	margin-right: 10px;
+}
+.floor-hd-big-last>.floor-hd{
+	border-bottom: 2px solid #89C62E;
+}
+.floor-hd-big-last>.floor-hd>h2{
+	color: #89C62E;
+}
+.p-sale{
+	color: red;
+	font-size: 12px;
+	font-weight: 100;
+}

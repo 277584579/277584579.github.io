@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户注册-淘菜网</title>
+		<link rel="stylesheet" type="text/css" href="libs/Font-Awesome-3.2.1/css/font-awesome.min.css" />
+		<link rel="shortcut icon" href="img/favicon_tcw9.ico" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+		<style>
+			#userIdTips {
+				color: red;
+			}
+			#btnSubmit{
+				cursor: pointer;
+			}
+			
+			#userIdTips span {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				font-size: 13px;
+				text-align: left;
+				line-height: 26px;
+			}
+			/*333333333333333333333*/
+			/*下拉菜单*/
+			
+			#email {
+				position: relative;
+			}
+			
+			.list {
+				list-style: none;
+				padding: 0px;
+				margin: 0px;
+				margin-left: 110px;
+				max-height: 400px;
+				width: 220px;
+				position: absolute;
+			}
+			
+			.list li {
+				border: 1px solid #EEE;
+				width: 256px;
+				height: 26px;
+				padding: 5px 10px;
+				margin: 0px;
+				background-color: white;
+				text-overflow: ellipsis;
+				/*溢出时变为省略*/
+				overflow: hidden;
+			}
+			
+			.list li:hover {
+				background-color: #E6F2E6;
+			}
+			
+			.list li span {
+				display: inline !important;
+			}
+			/*.lilight {
+				background-color: #E6F2E6;
+			}*/
+			
+			#second-li {
+				position: relative;
+				clear: both;
+			}
+			
+			#second-li-content {
+				position: absolute;
+				width: 257px;
+				height: 100px;
+				margin-left: 110px;
+				/*background-color: red;*/
+			}
+			
+			.icon-ok-sign {
+				color: green;
+			}
+			
+			.icon-remove-sign {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body ng-app="myApp" ng-controller="validateCtrl">
+
+		<header>
+			<div class="logo-search"><img id="imgLogoTag" src="img/144248329438750388.jpg" alt="" /></div>
+		</header>
+		<main>
+
+			<div class="wrap-logreg">
+				<div class="logreg-dialog">
+					<div class="logreg-hd">
+						<h3>注册新用户</h3></div>
+					<div class="logreg-bd">
+
+						<!--novalidate关闭表单自带的验证功能，使用angular验证表单时一般都要关闭-->
+						<!--表单验证-->
+						<form   novalidate name="myForm"  id="add-form">
+							<ul>
+								<li><span class="logreg-bd-span">用户名：</span><input pattern="^[a-zA-Z]\w{5,17}$" type="text" name="name" ng-model="name" required autocomplete="off" placeholder="以字母开头，只能由字母或数字组成" />
+									<!--通过作用域中form对象打点可以获得form中的某个
+				                     input。input的$valid属性表示是否通过验证。
+				                     $invalid表示是否不通过验证。
+				                     $dirty表示否是被修改过。-->
+									<!--<span id="form-div-span" >
+				                     	1
+				                     </span>-->
+									<span ng-show="myForm.name.$valid&&myForm.name.$dirty" class="form-div-span icon-ok-sign"></span>
+									<span ng-show="myForm.name.$invalid&&myForm.name.$dirty" class="form-div-span icon-remove-sign" title="用户名必须在2-6位之间"></span>
+									<p id="userIdTips">
+										<span ng-show="myForm.name.$error.required">请填写用户名！</span>
+										<span ng-show="myForm.name.$error.name">用户名必须在2-6位之间</span>
+									</p>
+								</li>
+								<div class="content">
+									<li id="second-li">
+										<!--pattern="\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}"-->
+										<span class="logreg-bd-span">电子邮箱：</span><input   id="email" type="text" name="email" ng-model="email" autocomplete="off" placeholder="请输入你的邮箱" required />
+										<span ng-show="myForm.email.$valid&&myForm.email.$dirty" id="form-div-span" class="form-div-span icon-ok-sign"></span>
+										<span ng-show="myForm.email.$invalid&&myForm.email.$dirty" class="form-div-span icon-remove-sign" title="请输入正确邮箱地址"></span>
+										<ul class="list"></ul>
+										<p id="userIdTips" style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+											<span ng-show="myForm.email.$error.required">邮箱是必须的。</span>
+											<span ng-show="myForm.email.$error.email"></span>
+										</p>
+								</div>
+
+								</li>
+								<li><span class="logreg-bd-span">密码：</span><input pattern="^[a-zA-Z]\w{5,17}$" type="password" name="psw" ng-model="psw" autocomplete="off" placeholder="请输入你的密码" required />
+									<span ng-show="myForm.psw.$valid&&myForm.psw.$dirty" id="form-div-span" class="form-div-span icon-ok-sign"></span>
+									<span ng-show="myForm.psw.$invalid&&myForm.psw.$dirty" class="form-div-span icon-remove-sign" title="请输入正确邮箱地址"></span>
+									<p id="userIdTips">
+										<span ng-show="myForm.psw.$error.required">需要输入密码</span>
+										<span ng-show="myForm.psw.$error.psw">密码请设为6-18位字母或数字。</span>
+									</p>
+								</li>
+								<li><span class="logreg-bd-span">确认密码：</span><input type="password" name="repeat" ng-model="repeat" autocomplete="off" placeholder="请再次输入你的密码" required />
+									<span ng-show="psw==repeat&&myForm.repeat.$dirty" class="icon-ok-sign"></span>
+									<span ng-show="psw!=repeat&&myForm.repeat.$dirty" class="icon-remove-sign" title="两次密码输入不一致"></span>
+
+									<p id="userIdTips">
+										<span ng-show="psw!=repeat&&myForm.repeat.$dirty">两次密码不一致</span>
+									</p>
+								</li>
+
+								<li><span class="logreg-bd-span">验证码：</span><input type="text" name="code" id="logreg-bd-last" autocomplete="off" />
+									<img src="http://tcw9.gdcct.com/validateCode/validateCode.jspx?id=0.389378056832846" id="validateCodeId" /> <i>  看不清？<a href="regist.html">换一张</a></i>
+									<p id="userIdTips"></p>
+								</li>
+								<li><span class="logreg-bd-span"></span>
+									<button ng-disabled="myForm.$invalid||psw!=repeat"  ng-click="submit()"  id="btnSubmit" class="regentbtn">免费注册<span id="regentbtn-span" class=" icon-caret-right"></span></button></li>
+							
+							</ul>
+						</form>
+
+					</div>
+					<!--右侧栏-->
+					<div class="quick-login">
+						<h4>已有账号了，直接登录</h4>
+						<div class="loginbtn">
+							<a href="login.html" id="loginbtn-a"><button>登录</button></a>
+							<a href="firstPapg.html">忘记密码？</a>
+						</div>
+						<div class="bgline"></div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer>
+			<div class="w-ensure">
+				<div class="w-main">
+					<ul>
+						<li><img src="img/ft-svr1.gif" /></li>
+						<li><img src="img/ft-svr2.gif" /></li>
+						<li><img src="img/ft-svr3.gif" /></li>
+						<li><img src="img/ft-svr4.gif" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ft-copyright">
+				<div class="ft-cp-link" style="margin:0px;padding:0px;">
+					<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;line-height:26px;color:#999999;font-family:tahoma, arial, 宋体, sans-serif;"><span style="margin:0px;padding:0px;line-height:1.5;">运营单位：云浮新兴农业　</span><span style="margin:0px;padding:0px;line-height:1.5;">技术支持：村村通科技</span></p>
+					<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;"><span style="color:#999999;font-family:tahoma, arial, 宋体, sans-serif;line-height:26px;">地址：云浮新兴　电话：86-0851-86202418</span></p>
+					<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;line-height:26px;color:#999999;font-family:tahoma, arial, 宋体, sans-serif;">E-mail：123456@163.com　粤ICP备13002611号</p>
+				</div>
+			</div>
+			</div>
+		</footer>
+	</body>
+
+</html>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/angular/angular.js"></script>
+<script src="js/main.js"></script>
+
+<!--注册页面发送请求添加数据-->
+
+
+
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+	//控制器
+	//自定义一个服务
+	app.controller("validateCtrl", ["$scope", "regist",function(s, f) {
+			s.submit = function () {
+				
+				f()
+			}
+
+		}
+	]);
+
+	app.factory("regist", function() {
+		return function() {
+                
+			var param = $("#add-form").serialize();
+			console.log(param);
+			$.post("/add", param, function(resData) {
+				//      console.dir(resData)
+				if(resData.err == 0) {
+					//			添加成功
+					alert(resData.msg);
+					location.href = 'login.html';
+				} else {
+					alert(resData.msg);
+				}
+			});
+
+		}
+	})
+</script>

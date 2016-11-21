@@ -1,0 +1,189 @@
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+			header{
+				width: 100%;
+				height: 110px;
+				/*background-color: red;*/
+				background-size: 100% 100%;
+				background-image: url(img/bnrbg.gif);
+				border-bottom: 3px solid #0D942E;
+			}
+			.logo-search{
+				width: 980px;
+				height: 110px;
+				margin: 0 auto;
+				
+			}
+			#imgLogoTag{
+				margin-top: 10px;
+			}
+			/*.warp{
+				width: 100%;
+				height: ;
+			}*/
+			.wrap-logreg{
+				width: 944px;
+				height: 544px;
+				margin: 0 auto;
+				/*background-color: red;*/
+				padding-top: 50px;
+			}
+			.logreg-dialog{
+				width: 944px;
+				height: 444px;
+				border: 1px solid #DEDEDE;
+				padding-top: 25px;
+				padding-left: 30px;
+				padding-right: 30px;
+				background-color: #F7F7F7;
+				
+			}
+			.logreg-hd{
+
+				height: 25px;
+				
+				border-bottom: 1px solid #E5E5E5;
+				
+			}
+			.logreg-hd>h3{
+				font-size: 15px;
+				line-height: 21px;
+				font-weight: 600;
+				color: #666666;
+			}
+			.logreg-bd{
+				height: 370px;
+				width: 500px;
+				padding-top: 50px;
+				display: inline-block;
+			}
+			.logreg-bd-span{
+				display: inline-block;
+				width: 110px;
+				height: 26px;
+				font-size: 14px;
+				font-weight: 100;
+				/*color: gray;*/
+				text-align: right;
+				float: left;
+			}
+			.logreg-bd li{
+				list-style-type: none;
+				width: 500px;
+				height: 52px;
+			}
+			.logreg-bd input{
+				width: 257px;
+				height: 26px;
+				border:1px solid #BFBFBF;
+				padding: 5px 0 5px 5px;
+				background-color: #FFFFFF;
+				color: gray;
+			}
+			#logreg-bd-last{
+				width: 97px;
+				float: left;
+			}
+			#userIdTips{
+				height: 26px;
+				margin-left:  110px ;
+			}
+			#validateCodeId{
+				width: 62px;
+				height: 20px;
+				margin: 3px 0 0 5px;
+				line-height: 26px;
+				float: left;
+			}
+			i{
+				font-style: normal;
+				font-size: 12px;
+				color: gray;
+				margin-left: 10px;
+			}
+			i>a{
+				text-decoration: none;
+				color: #0066CC;
+			}
+			i>a:hover{
+				color: red;
+				text-decoration: underline;
+			}
+			.quick-login{
+				width: 361px;
+				height: 340px;
+				display: inline-block;
+				/*background-color: red;*/
+				
+				float: right;
+				margin-top: 25px;
+				padding: 90px 0 0 60px;
+				border-left: 1px solid #E5E5E5;
+			}
+			.quick-login>h4{
+				font-size: 12px;
+				font-weight: 400;
+				color: gray;
+			}
+			.loginbtn{
+				margin: 10px 0 15px 0;
+			}
+			.loginbtn button{
+				color: white;
+				width: 70px;
+				height: 25px;
+				font-size: 12px;
+				background-color: #009900;
+				border: none;
+				
+			}
+			.loginbtn button:hover{
+				
+				background-color: #00AE00;
+			}
+			.loginbtn a{
+				text-decoration: none;
+				font-size: 12px;
+				color: #0066CC;
+			}
+			.loginbtn a:hover{
+				color: red;
+				text-decoration: underline;
+			}
+			.bgline{
+				width: 100%;
+
+				border-top: 1px solid #E5E5E5;
+			}
+			.regentbtn{
+				width: 220px;
+				height: 30px;
+				font-size: 14px;
+				font-weight: 700;
+				color: white;
+				border:none;
+				text-align: center;
+				line-height: 30px;
+				/*padding-left: 49px;*/
+				background-color: #FF6A00;
+			}
+
+			#regentbtn-span{
+				float: right;
+				width: 5px;
+				height: 5px;
+				margin-right: 20px;
+				line-height: 30px;
+			}
+			#btnSubmit{
+				margin: 15px 20px 0 0;
+			}
+			#btnSubmit:hover{
+				background-color: #FF5500;
+			}
+			#loginbtn-a{
+				color: white;
+			}

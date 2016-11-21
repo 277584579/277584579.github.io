@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录-淘菜网</title>
+		<link rel="shortcut icon" href="img/favicon_tcw9.ico" />
+		<link rel="stylesheet" type="text/css" href="libs/Font-Awesome-3.2.1/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<style type="text/css">
+		/*.logreg-bd-span input{
+			float: left;
+		}*/
+		  /*.form-div-span{
+		  	float: right !important;
+		  	line-height: 26px;
+		  	width: 76px !important;
+		  }*/
+		 #last-li{
+		 	position: relative;
+		 }
+		 #last-li p{
+		 	position: absolute;
+		 	width: 297px;
+		 	top: 22px;
+		 	color: red;
+		 	font-size: 12px;
+		 	line-height: 22px;
+		 }
+		</style>
+	</head>
+
+	<body  ng-app="myApp" ng-controller="validateCtrl">
+		<header>
+			<div class="logo-search"><img id="imgLogoTag" src="img/144248329438750388.jpg" alt="" /></div>
+		</header>
+		<main>
+			<div class="logreg-dialog">
+				<div class="logreg-hd">用户登录</div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  <form novalidate name="myForm" id="seek-form" >
+				<div class="logreg-bd">
+					<ul>
+						<li><span class="logreg-bd-span">用户名：</span>
+							
+							<input pattern="^[a-zA-Z]\w{5,17}$" ng-model="name" autocomplete="off" name="name" type="text" placeholder="用户名/邮箱/手机号" />
+
+							<p id="accountStrMsg"></p>
+						</li>
+						<li><span class="logreg-bd-span">密码：</span>
+							<input pattern="^[a-zA-Z]\w{5,17}$" ng-model="psw" autocomplete="off" name="psw" type="password  " />
+							<a class="rlink" href="">忘记密码？</a>
+							<p id="passwordMsg"></p>
+						</li>
+						<li id="last-li"><span></span>
+							<input id="autoLoginInput" ng-model="checkbox" type="checkbox" name="" id="" value="" /><label for="">下次自动登录</label>
+							<!--<p >你输入的密码与用户名不匹配，请重新输入。</p>-->
+						</li>
+						<li><span></span>
+							<!--提交按钮-->
+							<button   ng-click="submit()" value=""  drec  class="logbtn">登录</button>
+							<!--<button class="logbtn" onclick="seek(event)">登录</button>-->
+                           
+							<!--<a href="regist.html"><button id="btnSubmit" class="regentbtn">免费注册<span id="regentbtn-span" class=" icon-caret-right"></span></button></a>-->
+								
+							
+						</li>
+					</ul>
+				</div>
+			  </form>
+			<a href="regist.html">
+				<button id="btnSubmit" class="regentbtn">免费注册<span id="regentbtn-span" class=" icon-caret-right"></span></button></a>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+			<img class="float-img" src="img/13595269995238144.jpg" />
+		</main>
+		<footer>
+			<div class="w-ensure">
+				<div class="w-main">
+					<ul>
+						<li><img src="img/ft-svr1.gif" /></li>
+						<li><img src="img/ft-svr2.gif" /></li>
+						<li><img src="img/ft-svr3.gif" /></li>
+						<li><img src="img/ft-svr4.gif" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ft-copyright">
+				<div class="ft-cp-link" style="margin:0px;padding:0px;">
+					<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;line-height:26px;color:#999999;font-family:tahoma, arial, 宋体, sans-serif;"><span style="margin:0px;padding:0px;line-height:1.5;">运营单位：云浮新兴农业　</span><span style="margin:0px;padding:0px;line-height:1.5;">技术支持：村村通科技</span></p>
+					<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;"><span style="color:#999999;font-family:tahoma, arial, 宋体, sans-serif;line-height:26px;">地址：云浮新兴　电话：86-0851-86202418</span></p>
+					<p style="text-align:center;font-size: 12px;margin-top:0px;margin-bottom:0px;padding:0px;line-height:26px;color:#999999;font-family:tahoma, arial, 宋体, sans-serif;">E-mail：123456@163.com　粤ICP备13002611号</p>
+				</div>
+			</div>
+			</div>
+
+	</body>
+
+</html>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/template.js"></script>
+<script src="libs/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+<!--用户登录-->
+
+
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+
+
+	//控制器（）
+	app.controller("validateCtrl", ["$scope", "login",function(s, f) {
+
+		
+
+			s.submit = function () {
+				
+				f()
+			}
+
+		}
+	]);
+	
+//	app.directive("runoobDirective", function() {
+//  return {
+//      restrict : "A",
+//      //指定模板是否替换原标签。
+//		replace:true,
+//		link:function(){
+//			if($.cookie().token){
+//				console.log($.cookie())
+//				$("")
+//			}
+//		}
+//      template : "<h1>这是指令添加的内容{{}}</h1>"
+//  };
+//});
+
+	app.factory("login", function() {
+		return function() {
+                
+			var param = $("#seek-form").serialize();
+//			console.log(param);
+			$.get("/seek", param, function(resData) {
+				      console.log(1111)
+				if(resData.err == 0) {
+					//	用户存在
+					alert(resData.msg);
+					location.href = 'firstPapg.html';
+				} else {
+					alert(resData.msg);
+				}
+			});
+
+		}
+	})
+</script>
